@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: #FFFFFF;
+    --foreground: #2A2A2A;
+    --card: #FFFFFF;
+    --card-foreground: #2A2A2A;
+    --popover: #FFFFFF;
+    --popover-foreground: #2A2A2A;
+    --primary: #131A7F;
+    --primary-foreground: #FFFFFF;
+    --secondary: #4C55A0;
+    --secondary-foreground: #FFFFFF;
+    --muted: #F8F8F8;
+    --muted-foreground: #8A8A8A;
+    --accent: #F8F8F8;
+    --accent-foreground: #2A2A2A;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: #E5E5E5;
+    --input: #F8F8F8;
+    --ring: #131A7F;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Mobile-first responsive classes */
+  .mobile-container {
+    @apply w-full max-w-sm mx-auto px-4 sm:max-w-md md:max-w-lg lg:max-w-xl;
+  }
+  
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  .form-input {
+    @apply h-12 px-3 py-2 border border-mrc-light-gray rounded-sm bg-mrc-off-white 
+           text-mrc-charcoal placeholder-mrc-medium-gray
+           focus:outline-none focus:ring-2 focus:ring-mrc-deep-navy focus:border-mrc-deep-navy
+           transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply h-12 px-6 py-3 bg-mrc-deep-navy text-mrc-pure-white rounded-sm font-medium
+           hover:bg-mrc-professional-blue focus:outline-none focus:ring-2 focus:ring-mrc-deep-navy focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed
+           transition-all duration-200 transform active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply h-12 px-6 py-3 bg-transparent text-mrc-deep-navy border border-mrc-deep-navy rounded-sm font-medium
+           hover:bg-mrc-deep-navy hover:text-mrc-pure-white focus:outline-none focus:ring-2 focus:ring-mrc-deep-navy focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed
+           transition-all duration-200 transform active:scale-95;
+  }
+  
+  .error-message {
+    @apply text-mrc-error-red text-sm mt-1 flex items-center gap-1;
+  }
+  
+  .success-message {
+    @apply text-mrc-success-green text-sm mt-1 flex items-center gap-1;
+  }
+}

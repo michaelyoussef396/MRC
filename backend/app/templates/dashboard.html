@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h1>Dashboard</h1>
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Welcome back, {{ current_user.username }}!</h5>
+                <p class="card-text">You've been a member since {{ current_user.created_at.strftime('%B %d, %Y') }}.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Profile</h5>
+                <p class="card-text">Manage your profile settings and preferences.</p>
+                <a href="#" class="btn btn-primary">View Profile</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Settings</h5>
+                <p class="card-text">Configure your application settings.</p>
+                <a href="#" class="btn btn-primary">Settings</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Activity</h5>
+                <p class="card-text">View your recent activity and statistics.</p>
+                <a href="#" class="btn btn-primary">View Activity</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

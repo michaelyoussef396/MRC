@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <h1>About Flask App</h1>
+        <p class="lead">This is a modern Flask application template with best practices and common features pre-configured.</p>
+        
+        <h2 class="mt-4">Project Structure</h2>
+        <p>This application follows Flask best practices with a modular blueprint structure:</p>
+        <ul>
+            <li><strong>Blueprints:</strong> Organized code into logical modules (auth, main)</li>
+            <li><strong>Factory Pattern:</strong> Application factory for flexible configuration</li>
+            <li><strong>Database Models:</strong> SQLAlchemy ORM for database operations</li>
+            <li><strong>Forms:</strong> WTForms for secure form handling</li>
+            <li><strong>Authentication:</strong> Flask-Login for user session management</li>
+        </ul>
+
+        <h2 class="mt-4">Getting Started</h2>
+        <p>To run this application:</p>
+        <ol>
+            <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
+            <li>Set up environment variables in <code>.env</code></li>
+            <li>Initialize the database: <code>flask db init</code></li>
+            <li>Run migrations: <code>flask db migrate</code></li>
+            <li>Apply migrations: <code>flask db upgrade</code></li>
+            <li>Run the app: <code>flask run</code> or <code>python app.py</code></li>
+        </ol>
+
+        <h2 class="mt-4">Contributing</h2>
+        <p>Feel free to customize and extend this template for your needs!</p>
+    </div>
+</div>
+{% endblock %}

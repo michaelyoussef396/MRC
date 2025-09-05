@@ -1,0 +1,104 @@
+{
+  "mcpServers": {
+    "typescript-sdk": {
+      "command": "node",
+      "args": [
+        "path/to/ts-sdk-server.js"
+      ],
+      "env": {}
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
+      }
+    },
+    "puppeteer": {
+      "command": "node",
+      "args": [
+        "path/to/server-puppeteer"
+      ],
+      "env": {}
+    },
+    "slack": {
+      "command": "node",
+      "args": [
+        "path/to/server-slack"
+      ],
+      "env": {
+        "SLACK_TOKEN": "..."
+      }
+    },
+    "filesystem": {
+      "command": "node",
+      "args": [
+        "path/to/server-filesystem"
+      ],
+      "env": {}
+    },
+    "memory-bank": {
+      "command": "server-memory",
+      "args": [],
+      "env": {}
+    },
+    "sequential-thinking": {
+      "command": "code-reasoning",
+      "args": [],
+      "env": {}
+    },
+    "brave-search": {
+      "command": "server-brave-search",
+      "args": [],
+      "env": {}
+    },
+    "google-maps": {
+      "command": "server-google-maps",
+      "args": [],
+      "env": {
+        "GOOGLE_MAPS_API_KEY": "..."
+      }
+    },
+    "deep-graph": {
+      "command": "mcp-code-graph",
+      "args": [],
+      "env": {}
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@automatalabs/mcp-server-playwright"
+      ]
+    },
+    "browsermcp": {
+      "command": "npx",
+      "args": [
+        "@browsermcp/mcp@latest"
+      ]
+    },
+    "fetch": {
+      "command": "node",
+      "args": [
+        "/Users/michaelyoussef/claude_projects/mould/MRC/fetch-mcp/dist/index.js"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": [
+        "shadcn@latest",
+        "mcp"
+      ]
+    }
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "timestamp": "2025-09-04T18:28:14.779Z",
+  "overallScore": 63,
+  "mobileScore": 62,
+  "breakpoints": {
+    "mobile": {
+      "name": "Mobile (375px)",
+      "viewport": {
+        "width": 375,
+        "height": 812,
+        "name": "Mobile (375px)",
+        "priority": "PRIMARY"
+      },
+      "scores": {
+        "layout": 22,
+        "touchTargets": 13,
+        "performance": 17,
+        "functionality": 0,
+        "accessibility": 8,
+        "total": 60
+      },
+      "maxScores": {
+        "layout": 25,
+        "touchTargets": 15,
+        "performance": 20,
+        "functionality": 30,
+        "accessibility": 10,
+        "total": 100
+      },
+      "issues": [
+        {
+          "breakpoint": "mobile",
+          "severity": "ERROR",
+          "description": "Authentication test failed: locator.check: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"checkbox\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <input value=\"on\" tabindex=\"-1\" type=\"checkbox\" aria-hidden=\"true\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+          "timestamp": "2025-09-04T18:28:51.031Z"
+        }
+      ],
+      "screenshots": [],
+      "percentage": 60
+    },
+    "largeMobile": {
+      "name": "Large Mobile (414px)",
+      "viewport": {
+        "width": 414,
+        "height": 896,
+        "name": "Large Mobile (414px)",
+        "priority": "PRIMARY"
+      },
+      "scores": {
+        "layout": 22,
+        "touchTargets": 13,
+        "performance": 20,
+        "functionality": 0,
+        "accessibility": 8,
+        "total": 63
+      },
+      "maxScores": {
+        "layout": 25,
+        "touchTargets": 15,
+        "performance": 20,
+        "functionality": 30,
+        "accessibility": 10,
+        "total": 100
+      },
+      "issues": [
+        {
+          "breakpoint": "largeMobile",
+          "severity": "ERROR",
+          "description": "Authentication test failed: locator.check: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"checkbox\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <input value=\"on\" tabindex=\"-1\" type=\"checkbox\" aria-hidden=\"true\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+          "timestamp": "2025-09-04T18:29:30.587Z"
+        }
+      ],
+      "screenshots": [],
+      "percentage": 63
+    },
+    "tablet": {
+      "name": "Tablet (768px)",
+      "viewport": {
+        "width": 768,
+        "height": 1024,
+        "name": "Tablet (768px)",
+        "priority": "SECONDARY"
+      },
+      "scores": {
+        "layout": 22,
+        "touchTargets": 13,
+        "performance": 20,
+        "functionality": 0,
+        "accessibility": 8,
+        "total": 63
+      },
+      "maxScores": {
+        "layout": 25,
+        "touchTargets": 15,
+        "performance": 20,
+        "functionality": 30,
+        "accessibility": 10,
+        "total": 100
+      },
+      "issues": [
+        {
+          "breakpoint": "tablet",
+          "severity": "ERROR",
+          "description": "Authentication test failed: locator.check: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"checkbox\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <input value=\"on\" tabindex=\"-1\" type=\"checkbox\" aria-hidden=\"true\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+          "timestamp": "2025-09-04T18:30:10.119Z"
+        }
+      ],
+      "screenshots": [],
+      "percentage": 63
+    },
+    "desktop": {
+      "name": "Desktop (1440px)",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "name": "Desktop (1440px)",
+        "priority": "ENHANCEMENT"
+      },
+      "scores": {
+        "layout": 22,
+        "touchTargets": 15,
+        "performance": 20,
+        "functionality": 0,
+        "accessibility": 8,
+        "total": 65
+      },
+      "maxScores": {
+        "layout": 25,
+        "touchTargets": 15,
+        "performance": 20,
+        "functionality": 30,
+        "accessibility": 10,
+        "total": 100
+      },
+      "issues": [
+        {
+          "breakpoint": "desktop",
+          "severity": "ERROR",
+          "description": "Authentication test failed: locator.check: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"checkbox\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <input value=\"on\" tabindex=\"-1\" type=\"checkbox\" aria-hidden=\"true\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+          "timestamp": "2025-09-04T18:30:49.635Z"
+        }
+      ],
+      "screenshots": [],
+      "percentage": 65
+    }
+  },
+  "performance": {
+    "mobile": {
+      "loadTime": 1555,
+      "status": 200,
+      "fcpTarget": false
+    },
+    "largeMobile": {
+      "loadTime": 1330,
+      "status": 200,
+      "fcpTarget": true
+    },
+    "tablet": {
+      "loadTime": 1350,
+      "status": 200,
+      "fcpTarget": true
+    },
+    "desktop": {
+      "loadTime": 1326,
+      "status": 200,
+      "fcpTarget": true
+    }
+  },
+  "touchTargets": {
+    "mobile": [
+      {
+        "element": "Email Input",
+        "x": 41,
+        "y": 368,
+        "width": 293,
+        "height": 48
+      },
+      {
+        "element": "Password Input",
+        "x": 41,
+        "y": 472,
+        "width": 293,
+        "height": 48
+      },
+      {
+        "element": "Sign In Button",
+        "x": 41,
+        "y": 589,
+        "width": 293,
+        "height": 48
+      }
+    ],
+    "largeMobile": [
+      {
+        "element": "Email Input",
+        "x": 41,
+        "y": 410,
+        "width": 332,
+        "height": 48
+      },
+      {
+        "element": "Password Input",
+        "x": 41,
+        "y": 514,
+        "width": 332,
+        "height": 48
+      },
+      {
+        "element": "Sign In Button",
+        "x": 41,
+        "y": 631,
+        "width": 332,
+        "height": 48
+      }
+    ],
+    "tablet": [
+      {
+        "element": "Email Input",
+        "x": 185,
+        "y": 474,
+        "width": 398,
+        "height": 48
+      },
+      {
+        "element": "Password Input",
+        "x": 185,
+        "y": 578,
+        "width": 398,
+        "height": 48
+      },
+      {
+        "element": "Sign In Button",
+        "x": 185,
+        "y": 695,
+        "width": 398,
+        "height": 48
+      }
+    ]
+  },
+  "accessibility": {},
+  "userExperience": {},
+  "issues": [
+    {
+      "breakpoint": "mobile",
+      "severity": "ERROR",
+      "description": "Authentication test failed: locator.check: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"checkbox\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <input value=\"on\" tabindex=\"-1\" type=\"checkbox\" aria-hidden=\"true\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "timestamp": "2025-09-04T18:28:51.031Z"
+    },
+    {
+      "breakpoint": "largeMobile",
+      "severity": "ERROR",
+      "description": "Authentication test failed: locator.check: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"checkbox\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <input value=\"on\" tabindex=\"-1\" type=\"checkbox\" aria-hidden=\"true\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "timestamp": "2025-09-04T18:29:30.587Z"
+    },
+    {
+      "breakpoint": "tablet",
+      "severity": "ERROR",
+      "description": "Authentication test failed: locator.check: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"checkbox\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <input value=\"on\" tabindex=\"-1\" type=\"checkbox\" aria-hidden=\"true\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "timestamp": "2025-09-04T18:30:10.119Z"
+    },
+    {
+      "breakpoint": "desktop",
+      "severity": "ERROR",
+      "description": "Authentication test failed: locator.check: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"checkbox\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <input value=\"on\" tabindex=\"-1\" type=\"checkbox\" aria-hidden=\"true\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"p-6 pt-0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "timestamp": "2025-09-04T18:30:49.635Z"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "category": "Mobile UX",
+      "description": "Mobile score 62% below 90% target. Focus on mobile breakpoints."
+    }
+  ],
+  "phase1Ready": false
+}
