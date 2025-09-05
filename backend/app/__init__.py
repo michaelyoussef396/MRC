@@ -35,14 +35,19 @@ def create_app(config_class=Config):
         strict_transport_security=False,  # Enable in production with HTTPS
         content_security_policy={
             'default-src': "'self'",
-            'script-src': "'self' 'unsafe-inline'",
-            'style-src': "'self' 'unsafe-inline'",
-            'font-src': "'self'",
-            'img-src': "'self' data:",
-            'connect-src': "'self' http://localhost:3000 http://localhost:3001 http://localhost:3002"
+            'script-src': "'self' 'unsafe-inline'",  # Next.js requires inline scripts
+            'style-src': "'self' 'unsafe-inline'",   # Next.js requires inline styles
+            'font-src': "'self' data:",
+            'img-src': "'self' data: blob:",
+            'connect-src': "'self' http://localhost:3000 http://localhost:3001 http://localhost:3002",
+            'object-src': "'none'",
+            'base-uri': "'self'",
+            'form-action': "'self'",
+            'frame-ancestors': "'none'"
         },
         frame_options='DENY',
-        x_content_type_options='nosniff'
+        x_content_type_options='nosniff',
+        referrer_policy='strict-origin-when-cross-origin'
     )
 
     # Register API blueprints

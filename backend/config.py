@@ -17,6 +17,10 @@ class Config:
     JWT_REFRESH_TOKEN_EXPIRES = timedelta(days=30)  # 30-day refresh tokens
     JWT_COOKIE_SECURE = os.environ.get('JWT_COOKIE_SECURE', 'False').lower() in ['true', 'on', '1']
     JWT_COOKIE_CSRF_PROTECT = False  # Simplified for development
+    JWT_TOKEN_LOCATION = ['cookies']
+    JWT_COOKIE_SAMESITE = 'Lax'
+    JWT_ACCESS_COOKIE_NAME = 'access_token_cookie'
+    JWT_REFRESH_COOKIE_NAME = 'refresh_token_cookie'
     
     # CORS Configuration  
     CORS_ORIGINS = os.environ.get('CORS_ORIGINS', 'http://localhost:3000,http://localhost:3001,http://localhost:3002').split(',')

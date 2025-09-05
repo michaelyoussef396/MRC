@@ -58,25 +58,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const isAuthenticated = !!user
 
-  // Initialize auth state from localStorage
+  // Initialize auth state by checking if we have valid cookies
   useEffect(() => {
     const initializeAuth = async () => {
-      const token = localStorage.getItem('access_token')
-      if (token) {
-        try {
-          const response = await api.get('/auth/profile')
-          setUser(response.data.user)
-        } catch (error) {
-          // Token might be expired, try refresh
-          const refreshToken = localStorage.getItem('refresh_token')
-          if (refreshToken) {
-            const refreshSuccess = await refreshTokens()
-            if (!refreshSuccess) {
-              clearAuthData()
-            }
-          } else {
-            clearAuthData()
-          }
+      try {
+        // Make a simple request to check if we have valid cookies
+        const response = await api.get('/auth/profile')
+        setUser(response.data.user)
+      } catch (error: any) {
+        // If 401, we're not authenticated - this is normal
+        if (error?.response?.status === 401) {
+          setUser(null)
+        } else {
+          console.error('Auth initialization error:', error)
+          setUser(null)
         }
       }
       setIsLoading(false)
@@ -86,21 +81,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [])
 
   const clearAuthData = () => {
-    localStorage.removeItem('access_token')
-    localStorage.removeItem('refresh_token')
+    // Cookies are cleared by the server, just clear user state
     setUser(null)
   }
 
   const refreshTokens = async (): Promise<boolean> => {
     try {
-      const refreshToken = localStorage.getItem('refresh_token')
-      if (!refreshToken) return false
-
-      const response = await api.post('/auth/refresh', {}, {
-        headers: { Authorization: `Bearer ${refreshToken}` }
-      })
-
-      localStorage.setItem('access_token', response.data.access_token)
+      const response = await api.post('/auth/refresh')
       setUser(response.data.user)
       return true
     } catch (error) {
@@ -114,12 +101,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setIsLoading(true)
       const response = await api.post('/auth/login', credentials)
 
-      // Store tokens
-      localStorage.setItem('access_token', response.data.access_token)
-      if (response.data.refresh_token) {
-        localStorage.setItem('refresh_token', response.data.refresh_token)
-      }
-
+      // Tokens are now stored in HttpOnly cookies by the server
       setUser(response.data.user)
       toast.success('Login successful!')
       return true

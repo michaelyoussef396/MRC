@@ -25,7 +25,7 @@ module.exports = {
           'warm-gray': '#B2A09B',
           'charcoal': '#2A2A2A',
           'light-gray': '#E5E5E5',
-          'medium-gray': '#8A8A8A',
+          'medium-gray': '#6B6B6B',
           'success-green': '#10B981',
           'error-red': '#EF4444',
           'warning-amber': '#F59E0B',
@@ -51,7 +51,7 @@ module.exports = {
         },
         muted: {
           DEFAULT: "#F8F8F8",
-          foreground: "#8A8A8A",
+          foreground: "#6B6B6B",
         },
         accent: {
           DEFAULT: "#F8F8F8",

@@ -105,22 +105,27 @@ export default function LoginPage() {
           </CardHeader>
           
           <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6" noValidate>
               {/* Email Field */}
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="michaelyoussef396@gmail.com"
+                  placeholder="your@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className={errors.email ? 'border-mrc-error-red focus-visible:ring-mrc-error-red' : ''}
                   autoComplete="email"
                   autoFocus
+                  aria-describedby={errors.email ? "email-error" : undefined}
+                  aria-invalid={errors.email ? 'true' : 'false'}
+                  aria-required="true"
                 />
                 {errors.email && (
-                  <p className="text-mrc-error-red text-sm">{errors.email}</p>
+                  <div role="alert" aria-live="polite">
+                    <p id="email-error" className="text-mrc-error-red text-sm font-medium">{errors.email}</p>
+                  </div>
                 )}
               </div>
 
@@ -136,18 +141,24 @@ export default function LoginPage() {
                     onChange={(e) => setPassword(e.target.value)}
                     className={errors.password ? 'border-mrc-error-red focus-visible:ring-mrc-error-red pr-12' : 'pr-12'}
                     autoComplete="current-password"
+                    aria-describedby={errors.password ? "password-error" : undefined}
+                    aria-invalid={errors.password ? 'true' : 'false'}
+                    aria-required="true"
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-mrc-medium-gray hover:text-mrc-charcoal transition-colors"
-                    tabIndex={-1}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-mrc-medium-gray hover:text-mrc-charcoal transition-colors focus:outline-none focus:ring-2 focus:ring-mrc-deep-navy focus:ring-offset-2 rounded-sm"
+                    aria-label={showPassword ? 'Hide password' : 'Show password'}
+                    tabIndex={0}
                   >
                     {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                   </button>
                 </div>
                 {errors.password && (
-                  <p className="text-mrc-error-red text-sm">{errors.password}</p>
+                  <div role="alert" aria-live="polite">
+                    <p id="password-error" className="text-mrc-error-red text-sm font-medium">{errors.password}</p>
+                  </div>
                 )}
               </div>
 
@@ -165,7 +176,9 @@ export default function LoginPage() {
 
               {/* General Error */}
               {errors.general && (
-                <p className="text-mrc-error-red text-sm text-center">{errors.general}</p>
+                <div role="alert" aria-live="assertive" className="text-center">
+                  <p className="text-mrc-error-red text-sm font-medium">{errors.general}</p>
+                </div>
               )}
 
               {/* Submit Button */}
@@ -173,11 +186,12 @@ export default function LoginPage() {
                 type="submit"
                 className="w-full"
                 disabled={isSubmitting}
+                aria-describedby={isSubmitting ? "loading-message" : undefined}
               >
                 {isSubmitting ? (
                   <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Signing In...
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
+                    <span id="loading-message">Signing In...</span>
                   </>
                 ) : (
                   'Sign In'

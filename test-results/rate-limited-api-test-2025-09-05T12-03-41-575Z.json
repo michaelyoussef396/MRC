@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "total": 5,
+    "passed": 2,
+    "failed": 1,
+    "skipped": 2,
+    "passRate": 40
+  },
+  "results": [
+    {
+      "test": "Environment Check",
+      "status": "PASS",
+      "details": "API responding correctly (401 for missing auth)",
+      "error": null,
+      "timestamp": "2025-09-05T12:02:41.152Z"
+    },
+    {
+      "test": "Valid Login",
+      "status": "FAIL",
+      "details": "Invalid credentials or user not found",
+      "error": null,
+      "timestamp": "2025-09-05T12:02:56.363Z"
+    },
+    {
+      "test": "Token Validation",
+      "status": "SKIP",
+      "details": "No token available from login test",
+      "error": null,
+      "timestamp": "2025-09-05T12:03:11.365Z"
+    },
+    {
+      "test": "Profile Access",
+      "status": "SKIP",
+      "details": "No token available",
+      "error": null,
+      "timestamp": "2025-09-05T12:03:26.366Z"
+    },
+    {
+      "test": "Invalid Credentials",
+      "status": "PASS",
+      "details": "Invalid credentials properly rejected",
+      "error": null,
+      "timestamp": "2025-09-05T12:03:41.575Z"
+    }
+  ],
+  "recommendations": [
+    "Verify test user exists in database and credentials are correct",
+    "Re-run tests after fixing login issues to complete test coverage"
+  ],
+  "timestamp": "2025-09-05T12:03:41.575Z"
+}

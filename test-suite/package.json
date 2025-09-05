@@ -1,0 +1,16 @@
+{
+  "name": "test-suite",
+  "version": "1.0.0",
+  "main": "comprehensive-test-manager.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@playwright/test": "^1.55.0",
+    "axios": "^1.11.0"
+  }
+}
