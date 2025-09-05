@@ -47,12 +47,16 @@ export default function DashboardPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-4">
-              <div className="h-10 w-10 bg-mrc-deep-navy rounded-lg flex items-center justify-center">
-                <span className="text-lg font-bold text-mrc-pure-white">MRC</span>
+              <div className="h-10 w-10 flex items-center justify-center bg-mrc-deep-navy rounded-lg p-1">
+                <img 
+                  src="/SmallLogo.png" 
+                  alt="MOULD & RESTORATION CO" 
+                  className="h-full w-full object-contain"
+                />
               </div>
               <div>
                 <h1 className="text-xl font-semibold text-mrc-charcoal">Dashboard</h1>
-                <p className="text-sm text-mrc-medium-gray">Mould & Restoration Co.</p>
+                <p className="text-sm text-mrc-medium-gray">MOULD & RESTORATION CO</p>
               </div>
             </div>
             <Button

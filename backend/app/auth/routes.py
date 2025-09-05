@@ -12,7 +12,7 @@ import re
 import bleach
 from app import db, mail, limiter
 from app.auth import bp
-from app.models import User, PasswordResetToken
+from app.models import User
 
 def sanitize_input(text):
     """Sanitize user input to prevent XSS attacks"""
@@ -258,100 +258,7 @@ def add_technician():
         db.session.rollback()
         return jsonify({'error': 'Failed to add technician'}), 500
 
-@bp.route('/request-password-reset', methods=['POST'])
-def request_password_reset():
-    """Request password reset email"""
-    try:
-        data = request.get_json()
-        if not data or 'email' not in data:
-            return jsonify({'error': 'Email is required'}), 400
-        
-        user = User.query.filter_by(email=data['email']).first()
-        if not user:
-            # Don't reveal if email exists for security
-            return jsonify({'message': 'If the email exists, a reset link has been sent'}), 200
-        
-        # Generate reset token
-        token = PasswordResetToken.generate_token()
-        reset_token = PasswordResetToken(
-            user_id=user.id,
-            token=token,
-            expires_at=datetime.now(timezone.utc) + current_app.config['PASSWORD_RESET_TOKEN_EXPIRES']
-        )
-        
-        db.session.add(reset_token)
-        db.session.commit()
-        
-        # Send email (in production, would use actual email service)
-        try:
-            msg = Message(
-                'Password Reset - MRC System',
-                sender=current_app.config['MAIL_DEFAULT_SENDER'],
-                recipients=[user.email]
-            )
-            msg.body = f"""
-Hello {user.full_name},
 
-You have requested a password reset for your MRC account.
-
-Please click the link below to reset your password:
-{request.url_root}reset-password?token={token}
-
-This link will expire in 15 minutes.
-
-If you did not request this reset, please ignore this email.
-
-Best regards,
-MRC System
-            """
-            mail.send(msg)
-        except Exception as email_error:
-            current_app.logger.error(f"Email send error: {str(email_error)}")
-            # Don't fail the request if email fails in development
-        
-        return jsonify({'message': 'If the email exists, a reset link has been sent'}), 200
-        
-    except Exception as e:
-        current_app.logger.error(f"Password reset request error: {str(e)}")
-        return jsonify({'error': 'Failed to process password reset request'}), 500
-
-@bp.route('/reset-password', methods=['POST'])
-def reset_password():
-    """Reset password using token"""
-    try:
-        data = request.get_json()
-        if not data or 'token' not in data or 'new_password' not in data:
-            return jsonify({'error': 'Token and new password are required'}), 400
-        
-        # Find valid token
-        reset_token = PasswordResetToken.query.filter_by(
-            token=data['token'], 
-            used=False
-        ).first()
-        
-        if not reset_token or not reset_token.is_valid():
-            return jsonify({'error': 'Invalid or expired reset token'}), 400
-        
-        # Validate new password
-        is_valid, message = validate_password_strength(data['new_password'])
-        if not is_valid:
-            return jsonify({'error': message}), 400
-        
-        # Update user password
-        user = reset_token.user
-        user.set_password(data['new_password'])
-        
-        # Mark token as used
-        reset_token.used = True
-        
-        db.session.commit()
-        
-        return jsonify({'message': 'Password reset successfully'}), 200
-        
-    except Exception as e:
-        current_app.logger.error(f"Password reset error: {str(e)}")
-        db.session.rollback()
-        return jsonify({'error': 'Failed to reset password'}), 500
 
 @bp.route('/logout', methods=['POST'])
 @jwt_required()

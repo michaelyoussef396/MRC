@@ -1,6 +1,5 @@
 from datetime import datetime, timezone
 import bcrypt
-import secrets
 from app import db
 
 class User(db.Model):
@@ -48,30 +47,3 @@ class User(db.Model):
     def __repr__(self):
         return f'<User {self.username}>'
 
-class PasswordResetToken(db.Model):
-    """Password reset token model for secure password resets"""
-    id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-    token = db.Column(db.String(128), unique=True, nullable=False)
-    created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
-    expires_at = db.Column(db.DateTime, nullable=False)
-    used = db.Column(db.Boolean, default=False)
-
-    # Relationship
-    user = db.relationship('User', backref=db.backref('password_reset_tokens', lazy=True))
-
-    @staticmethod
-    def generate_token():
-        """Generate a secure random token"""
-        return secrets.token_urlsafe(32)
-
-    def is_expired(self):
-        """Check if token is expired"""
-        return datetime.now(timezone.utc) > self.expires_at
-
-    def is_valid(self):
-        """Check if token is valid (not used and not expired)"""
-        return not self.used and not self.is_expired()
-
-    def __repr__(self):
-        return f'<PasswordResetToken {self.token[:8]}...>'

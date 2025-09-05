@@ -79,16 +79,20 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-12 sm:px-6 lg:px-8 bg-mrc-off-white">
       <div className="w-full max-w-md space-y-8">
-        {/* MRC Logo/Branding */}
+        {/* Company Logo/Branding */}
         <div className="text-center">
-          <div className="mx-auto h-16 w-16 bg-mrc-deep-navy rounded-lg flex items-center justify-center mb-4">
-            <span className="text-2xl font-bold text-mrc-pure-white">MRC</span>
+          <div className="mx-auto h-20 w-20 mb-4 flex items-center justify-center bg-mrc-deep-navy rounded-lg p-2">
+            <img 
+              src="/SmallLogo.png" 
+              alt="MOULD & RESTORATION CO" 
+              className="h-full w-full object-contain"
+            />
           </div>
           <h1 className="text-3xl font-semibold text-mrc-charcoal">
             Welcome Back
           </h1>
           <p className="mt-2 text-mrc-medium-gray">
-            Sign in to your MRC account
+            Sign in to your MOULD & RESTORATION CO account
           </p>
         </div>
 
@@ -180,24 +184,10 @@ export default function LoginPage() {
                 )}
               </Button>
 
-              {/* Forgot Password Link */}
-              <div className="text-center">
-                <button
-                  type="button"
-                  onClick={() => router.push('/forgot-password')}
-                  className="text-sm text-mrc-deep-navy hover:text-mrc-professional-blue underline"
-                >
-                  Forgot your password?
-                </button>
-              </div>
             </form>
           </CardContent>
         </Card>
 
-        {/* Development Hint */}
-        <div className="text-center text-xs text-mrc-medium-gray">
-          <p>Demo: michaelyoussef396@gmail.com / AdminMike123!</p>
-        </div>
       </div>
     </div>
   )

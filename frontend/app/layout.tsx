@@ -8,8 +8,8 @@ import 'react-toastify/dist/ReactToastify.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'MRC Authentication',
-  description: 'Mould & Restoration Co. - Team Access Portal',
+  title: 'MOULD & RESTORATION CO - Authentication',
+  description: 'MOULD & RESTORATION CO - Team Access Portal',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
 }
 
